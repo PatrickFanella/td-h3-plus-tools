@@ -1,0 +1,71 @@
+{
+  "title": "60515 receive-only starter plan for TIDRADIO TD-H3 Plus",
+  "created": "2026-09-20",
+  "policy": {
+    "transmit": "disabled in every programmed memory",
+    "tone_squelch": "off so all analog traffic is audible",
+    "power": "Low as a secondary safeguard; duplex=off is the primary safeguard",
+    "scan": "continuous data and automated information channels are skipped"
+  },
+  "sources": {
+    "local_note": {
+      "title": "Chicagoland Amateur Radio Repeater Table",
+      "url": "/home/onnwee/Documents/ars-malefica/003 Resources/Reference/Chicagoland Amateur Radio Repeater Table.md",
+      "note": "Dated RepeaterBook snapshot; used as the discovery list, then checked against current sources."
+    },
+    "darc": {
+      "title": "DuPage Amateur Radio Club repeaters",
+      "url": "https://www.w9dup.org/repeaters.html"
+    },
+    "ilra": {
+      "title": "Illinois Repeater Association directory by city",
+      "url": "https://www.ilra.net/DirByRegByCity.html"
+    },
+    "rb_dupage": {
+      "title": "RepeaterBook DuPage County directory",
+      "url": "https://www.repeaterbook.com/repeaters/location_search.php?loc=DuPage&state_id=17&type=county"
+    },
+    "w9ccu": {
+      "title": "Wheaton Community Radio Amateurs repeaters",
+      "url": "https://www.w9ccu.org/wordpressLimitless/?page_id=104"
+    },
+    "noaa": {
+      "title": "NOAA Weather Radio stations serving northern Illinois",
+      "url": "https://www.weather.gov/lot/NWR"
+    },
+    "faa": {
+      "title": "FAA Chicago Terminal Area Chart, 2026-09-03 edition",
+      "url": "https://aeronav.faa.gov/visual/09-03-2026/PDFs/Chicago_TAC.pdf"
+    }
+  },
+  "channels": [
+    {"number": 1, "name": "DARC2M",  "frequency_mhz": 145.430, "mode": "FM", "scan": true,  "category": "amateur repeater", "documented_access": "-0.600 MHz, 107.2 Hz", "sources": ["darc", "ilra", "rb_dupage"]},
+    {"number": 2, "name": "DARC70",  "frequency_mhz": 442.550, "mode": "FM", "scan": true,  "category": "amateur repeater", "documented_access": "+5.000 MHz, 114.8 Hz", "sources": ["darc", "ilra", "rb_dupage"]},
+    {"number": 3, "name": "WCRA70",  "frequency_mhz": 444.475, "mode": "FM", "scan": true,  "category": "amateur repeater", "documented_access": "+5.000 MHz, 114.8 Hz", "sources": ["w9ccu", "ilra", "rb_dupage"]},
+    {"number": 4, "name": "YORK70",  "frequency_mhz": 442.875, "mode": "FM", "scan": true,  "category": "amateur repeater", "documented_access": "+5.000 MHz, 114.8 Hz", "sources": ["ilra", "rb_dupage"]},
+    {"number": 5, "name": "WESTMNT", "frequency_mhz": 145.490, "mode": "FM", "scan": true,  "category": "amateur repeater", "documented_access": "-0.600 MHz, 107.2 Hz", "sources": ["rb_dupage", "local_note"]},
+    {"number": 6, "name": "LISLE2M", "frequency_mhz": 146.655, "mode": "FM", "scan": true,  "category": "amateur repeater", "documented_access": "-0.600 MHz, 107.2 Hz", "sources": ["rb_dupage", "local_note"]},
+    {"number": 7, "name": "ANL2M",   "frequency_mhz": 145.190, "mode": "FM", "scan": true,  "category": "amateur repeater", "documented_access": "-0.600 MHz, 114.8 Hz", "sources": ["rb_dupage", "local_note"]},
+    {"number": 8, "name": "DARC220", "frequency_mhz": 224.680, "mode": "FM", "scan": true,  "category": "amateur repeater", "documented_access": "-1.600 MHz, 110.9 Hz; linked to 145.430", "sources": ["darc", "ilra", "local_note"]},
+    {"number": 9, "name": "CALL2M",  "frequency_mhz": 146.520, "mode": "FM", "scan": true,  "category": "amateur simplex calling"},
+    {"number": 10, "name": "CALL70", "frequency_mhz": 446.000, "mode": "FM", "scan": true,  "category": "amateur simplex calling"},
+
+    {"number": 11, "name": "WX-CHI",  "frequency_mhz": 162.550, "mode": "FM", "scan": false, "category": "NOAA Weather Radio", "sources": ["noaa"]},
+    {"number": 12, "name": "WX-LOCK", "frequency_mhz": 162.425, "mode": "FM", "scan": false, "category": "NOAA Weather Radio", "sources": ["noaa"]},
+    {"number": 13, "name": "WX-PLNO", "frequency_mhz": 162.400, "mode": "FM", "scan": false, "category": "NOAA Weather Radio", "sources": ["noaa"]},
+    {"number": 14, "name": "WX-RKFD", "frequency_mhz": 162.475, "mode": "FM", "scan": false, "category": "NOAA Weather Radio", "sources": ["noaa"]},
+    {"number": 15, "name": "WX-CRYS", "frequency_mhz": 162.500, "mode": "FM", "scan": false, "category": "NOAA Weather Radio", "sources": ["noaa"]},
+    {"number": 16, "name": "WX-DIXN", "frequency_mhz": 162.525, "mode": "FM", "scan": false, "category": "NOAA Weather Radio", "sources": ["noaa"]},
+    {"number": 17, "name": "WX-HEBR", "frequency_mhz": 162.450, "mode": "FM", "scan": false, "category": "NOAA Weather Radio", "sources": ["noaa"]},
+
+    {"number": 18, "name": "DPA-TWR",  "frequency_mhz": 120.900, "mode": "AM", "scan": true,  "category": "aviation receive", "sources": ["faa"]},
+    {"number": 19, "name": "DPA-GND",  "frequency_mhz": 121.800, "mode": "AM", "scan": true,  "category": "aviation receive", "sources": ["faa"]},
+    {"number": 20, "name": "DPA-ATIS", "frequency_mhz": 132.075, "mode": "AM", "scan": false, "category": "aviation receive", "sources": ["faa"]},
+    {"number": 21, "name": "LOT-TWR",  "frequency_mhz": 134.800, "mode": "AM", "scan": true,  "category": "aviation receive", "sources": ["faa"]},
+    {"number": 22, "name": "LOT-GND",  "frequency_mhz": 120.425, "mode": "AM", "scan": true,  "category": "aviation receive", "sources": ["faa"]},
+    {"number": 23, "name": "LOT-ATIS", "frequency_mhz": 126.675, "mode": "AM", "scan": false, "category": "aviation receive", "sources": ["faa"]},
+    {"number": 24, "name": "AIRGUARD", "frequency_mhz": 121.500, "mode": "AM", "scan": true,  "category": "aviation emergency receive", "sources": ["faa"]},
+
+    {"number": 25, "name": "APRS",    "frequency_mhz": 144.390, "mode": "FM", "scan": false, "category": "amateur packet receive"}
+  ]
+}
